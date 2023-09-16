@@ -24,12 +24,11 @@
 ## Set up aws sam for deployment from local
 1. follow first party installation steps (without homebrew) as mentioned [here](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html)
 2. ```
-❯ which sam
-/usr/local/bin/sam
-❯ sam --version
-SAM CLI, version 1.97.0
-```
-3. `sam local start-api`
+    ❯ which sam
+    /usr/local/bin/sam
+    ❯ sam --version
+    SAM CLI, version 1.97.0
+    ```
 
 ## Set up sso session with AWS cli (first update aws cli)
 1. `aws configure sso`

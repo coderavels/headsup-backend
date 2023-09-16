@@ -7,6 +7,13 @@
 /decks/:deck/cards
 - GET - get list of cards for a deck
 
+## Deploy changes in handlers to lambdas
+1. `make build && make build-lambda && sam deploy`
+
+## Run the lambda locally
+1. `make build && make build-lambda`
+2. sam local start-api
+
 ## Makefile
 1. ensure the `BINARY_NAME` in `Makefile` matches the `Resources.<name>.Properties.Handler` in `template.yml`
 2. ensure the `ZIP_NAME` is `Makefile` matches the zip file name in `Resources.<name>.Properties.CodeUri` in `template.yml`

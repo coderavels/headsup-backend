@@ -1,0 +1,24 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Description:
+  headsup-backend
+Resources:
+  APIs:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: headsupbackend # should match the BINARY_NAME var in makefile
+      CodeUri: ./bin/headsupbackend.zip # should match the ZIP_NAME var in makefile
+      Runtime: go1.x
+      Timeout: 10
+      Events:
+        GetDecks:
+          Type: Api
+          Properties:
+            Path: /decks
+            Method: get
+        GetDeckCards:
+          Type: Api
+          Properties:
+            Path: /decks/{id}/cards
+            Method: get
